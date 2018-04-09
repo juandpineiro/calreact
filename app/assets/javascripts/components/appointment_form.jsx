@@ -3,7 +3,7 @@ var AppointmentForm = React.createClass({
     var name = e.target.name;
     obj = {};
     obj[name] = e.target.value;
-    /* continue here */
+    this.props.onUserInput(obj);
   },
 
   render: function() {
@@ -14,7 +14,9 @@ var AppointmentForm = React.createClass({
           <input name='title' placeholder='Appointment title' 
                  value={this.props.input_title}
                  onChange={this.handleChange} />
-          <input name='appt_time' placeholder='Date and time' value={this.props.input_appt_time} />
+          <input name='appt_time' placeholder='Date and time' 
+                 value={this.props.input_appt_time}
+                 onChange={this.handleChange} />
           <input type='submit' value='Meke Appointment' />
         </form>
       </div>
