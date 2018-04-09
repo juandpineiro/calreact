@@ -2,8 +2,8 @@ var Appointments = React.createClass({
   getInitialState: function() {
     return {
       appointments: this.props.appointments,
-      title: 'Team standup meeting',
-      appt_time: 'Tomorrow at 9 am'
+      title:        '',
+      appt_time:    ''
     }
   },
 
@@ -12,7 +12,7 @@ var Appointments = React.createClass({
   },
 
   handleFormSubmit: function() {
-    var appointment = {title: this.state.title,
+    var appointment = {title:     this.state.title,
                        appt_time: this.state.appt_time}
     $.post('/appointments',
            {appointment: appointment})
