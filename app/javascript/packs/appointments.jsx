@@ -1,4 +1,9 @@
-class Appointments extends React.Component{
+import React from 'react'
+import ReactDOM from 'react-dom'
+import AppointmentForm from './appointment_form'
+import { AppointmentsList } from './appointments_list'
+
+export default class Appointments extends React.Component{
   constructor (props) {
     super(props)
     this.state = {
