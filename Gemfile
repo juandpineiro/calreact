@@ -34,7 +34,6 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'react-rails', '1.9.0'
 gem 'haml'
 
 group :development, :test do
